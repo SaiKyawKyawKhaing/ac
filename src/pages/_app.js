@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
-  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASE_URL : '';
+  const baseUrl = process.env.NODE_ENV === 'production' ? "https://saikyawkyawkhaing.github.io/ac/" : '';
   return (
     <>
       <Component {...pageProps} />
