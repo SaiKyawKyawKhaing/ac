@@ -7,12 +7,12 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Script src={`${baseUrl}assets/vendor/bootstrap/js/bootstrap.bundle.min.js`} />
-      <Script src={`${baseUrl}assets/vendor/php-email-form/validate.js`} />
-      <Script src={`${baseUrl}assets/vendor/aos/aos.js`} />
-      <Script src={`${baseUrl}assets/vendor/glightbox/js/glightbox.min.js`} />
-      <Script src={`${baseUrl}assets/vendor/swiper/swiper-bundle.min.js`} />
-      <Script src={`${baseUrl}assets/js/main.js`} />
+      <Script src={`${baseUrl}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js`} />
+      <Script src={`${baseUrl}/assets/vendor/php-email-form/validate.js`} />
+      <Script src={`${baseUrl}/assets/vendor/aos/aos.js`} />
+      <Script src={`${baseUrl}/assets/vendor/glightbox/js/glightbox.min.js`} />
+      <Script src={`${baseUrl}/assets/vendor/swiper/swiper-bundle.min.js`} />
+      <Script src={`${baseUrl}/assets/js/main.js`} />
     </>
   );
 }
