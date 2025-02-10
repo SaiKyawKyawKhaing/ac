@@ -5,11 +5,12 @@ class MyDocument extends Document {
   /**
    * This function renders the HTML document.
    * It includes the Google Fonts stylesheets for Roboto and Raleway fonts,
-   * Bootstrap CSS, Bootstrap Icons CSS, AOS CSS, Glightbox CSS and Swiper CSS.
+   * Bootstrap CSS, Bootstrap Icons CSS, AOS CSS, Glightbox CSS, and Swiper CSS.
    * It also links to the main CSS file.
    * @returns {JSX.Element} The rendered HTML document.
    */
   render() {
+    const basePath = process.env.NODE_ENV === 'production' ? 'https://saikyawkyawkhaing.github.io/ac/' : '';
     return (
       <Html>
         <Head>
@@ -18,27 +19,27 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link
-            href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+            href={`${basePath}/assets/vendor/bootstrap/css/bootstrap.min.css`}
             rel="stylesheet"
           />
           <link
-            href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+            href={`${basePath}/assets/vendor/bootstrap-icons/bootstrap-icons.css`}
             rel="stylesheet"
           />
           <link
-            href="/assets/vendor/aos/aos.css"
+            href={`${basePath}/assets/vendor/aos/aos.css`}
             rel="stylesheet"
           />
           <link
-            href="/assets/vendor/glightbox/css/glightbox.min.css"
+            href={`${basePath}/assets/vendor/glightbox/css/glightbox.min.css`}
             rel="stylesheet"
           />
           <link
-            href="/assets/vendor/swiper/swiper-bundle.min.css"
+            href={`${basePath}/assets/vendor/swiper/swiper-bundle.min.css`}
             rel="stylesheet"
           />
           <link
-            href="/assets/css/main.css"
+            href={`${basePath}/assets/css/main.css`}
             rel="stylesheet"
           />
         </Head>
@@ -52,3 +53,4 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+
