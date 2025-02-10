@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Menu from './Menu';
 
+
 /**
  * Header component renders the site's header with a logo link and a menu.
  *
