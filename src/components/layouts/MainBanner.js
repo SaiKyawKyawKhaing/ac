@@ -1,10 +1,12 @@
 import React from "react";
+import { useRouter } from 'next/router';
 
 export default function ManinBanner() {
+    const { basePath } = useRouter();
     return (
         <main className="main">
             <section id="hero" className="hero section dark-background">
-                <img src="./assets/img/hero-bg.jpg" alt="" className="" />
+                <img src={`${basePath}/assets/img/hero-bg.jpg`} alt="" className="" />
                 <div className="container d-flex flex-column align-items-center text-center rm-mt-auto mt-auto">
                     <h2 className="">Establishing<br /><span>Communication</span> Solutions</h2>
                     <p className="d-sm-none d-md-block d-none">Building F Yida Science Park, NO.11 Jinpu Road SIP, Suzhou City, Jiangsu Province, China</p>
