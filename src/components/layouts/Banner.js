@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 /**
  * Renders a banner with a title, description, and breadcrumbs.
@@ -10,6 +11,8 @@ import React from "react";
  * @returns {React.ReactElement} The banner.
  */
 export default function Banner({ title, description, breadcrumbs }) {
+  const { basePath } = useRouter();
+  
   return (
     <main className="main"> 
       <div className="page-title page-banner">
@@ -20,7 +23,7 @@ export default function Banner({ title, description, breadcrumbs }) {
             <ol>
               {breadcrumbs.map((breadcrumb, index) => (
                 <li key={index} className={breadcrumb.current ? "current" : ""}>
-                  <a href={breadcrumb.href}>{breadcrumb.text}</a>
+                  <a href={`${basePath}${breadcrumb.href}`}>{breadcrumb.text}</a>
                 </li>
               ))}
             </ol>
