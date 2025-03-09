@@ -1,31 +1,61 @@
 import React from "react";
 import { useRouter } from 'next/router';
 
-export default function ManinBanner() {
+export default function MainBanner() {
     const { basePath } = useRouter();
+    
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+
     return (
         <main className="main">
             <section id="hero" className="hero section dark-background">
                 <img src={`${basePath}/assets/img/hero-bg.jpg`} alt="" className="" />
                 <div className="container d-flex flex-column align-items-center text-center rm-mt-auto mt-auto">
-                    <h2 className="">Establishing<br /><span>Communication</span> Solutions</h2>
-                    <p className="d-sm-none d-md-block d-none">Building F Yida Science Park, NO.11 Jinpu Road SIP, Suzhou City, Jiangsu Province, China</p>
-                    <div className="">
-                        {/* <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" className="glightbox pulsating-play-btn mt-3"></a> */}
+                    <h2 className="">Empowering<br /><span>Southeast Asia </span>with AI-Driven Solutions</h2>
+                    <p className="d-sm-none d-md-block d-none">From AI integration to corporate training, we help businesses unlock the transformative power of artificial intelligence.</p>
+                    <div className="d-flex justify-content-center align-items-center pt-5 pb-5">
+                        <button className="button mr-3" onClick={() => scrollToSection('services')}>
+                            Explore Our Services
+                            <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
+                                <path
+                                    clip-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                    fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                        </button>
+                        <button className="button mr-3" onClick={() => scrollToSection('contact')}>
+                            Contact Us Today
+                            <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
+                                <path
+                                    clip-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                    fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div className="about-info mt-auto position-relative d-sm-none d-md-block d-none">
                     <div className="container position-relative">
                         <div className="row">
                             <div className="col-lg-6">
-                                <h2>About Amona Corporation</h2>
+                                <h2>About Digitechvault</h2>
                                 <p>
-                                    <b>Amona Corporation</b> delivers global wireless telecom solutions, specializing in O-RAN, Small Cells, and Optics. We prioritize quality, innovation, and customer satisfaction. Mission: Connecting everything.
+                                    <b>At Digitechvault</b> we’re pioneering the future of AI in Southeast Asia. As one of the region’s first AI consulting firms, we bridge the gap between cutting-edge technology and real-world business solutions. While our roots are in tech innovation, our focus is on empowering organizations to harness AI’s transformative power—whether through tailored education or strategic implementation.
                                 </p>
                             </div>
                             <div className="col-lg-3">
                                 <h3>Where</h3>
-                                <p> Suzhou City, Jiangsu Province, China</p>
+                                <p> We are serving in Myanmar, Thailand and Malaysia</p>
                             </div>
                             <div className="col-lg-3">
                                 <h3>When</h3>
@@ -36,5 +66,5 @@ export default function ManinBanner() {
                 </div>
             </section>
         </main>
-    )
+    );
 }

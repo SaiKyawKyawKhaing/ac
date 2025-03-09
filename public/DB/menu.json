@@ -6,18 +6,17 @@
     },
     {
       "id": 2,
-      "name": "Products",
-      "href": "/products",
-      "children": ["**** To add a dropdown you just need to add a new category in the DB/categories.json file ****"] 
+      "name": "About Us",
+      "href": "#about"
     },
     {
       "id": 3,
       "name": "Services",
-      "href": "/service"
+      "href": "#services"
     },
     {
       "id": 4,
       "name": "Contact Us",
-      "href": "/contact"
+      "href": "#contact"
     }
   ]

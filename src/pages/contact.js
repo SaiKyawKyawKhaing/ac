@@ -12,7 +12,7 @@ export default function Contact() {
       <Header />
       <Banner
         title="Contact Us"
-        description="Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias."
+        description="Get in Touch – We're Here to Help!"
         breadcrumbs={[
           { href: '/', text: 'Home' },
           { href: `${basePath}/contact`, text: 'Contact Us', current: true },

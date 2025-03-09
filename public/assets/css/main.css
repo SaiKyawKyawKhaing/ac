@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2f3138; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #00b0f0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #b6841f; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -63,20 +63,23 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--heading-font) !important;
 }
 
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
+  font-family: var(--heading-font) !important;
 }
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
+  font-family: var(--heading-font) !important;
 }
 
+p,
 h1,
 h2,
 h3,
@@ -235,9 +238,18 @@ h6 {
   line-height: 1;
 }
 
+.scrolled .header {
+  background: #010821;
+  padding: 0 !important;
+}
+.scrolled .header .logo img {
+  max-height: 90px;
+  margin-right: 90px;
+}
+
 .header .logo img {
-  max-height: 58px;
-  margin-right: 8px;
+  max-height: 120px;
+  margin-right: 120px;
 }
 
 .custom-dropdown{
@@ -590,11 +602,10 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 100px;
   margin-right: 6px;
 }
 
@@ -846,9 +857,22 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
   scroll-margin-top: 92px;
   overflow: clip;
+}
+
+.p-box{
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.p-box-contact {
+  background: #ffffff1a;
+  border-radius: 7px;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1199px) {
@@ -933,6 +957,9 @@ section,
   z-index: 2;
 }
 
+
+
+
 .hero .container {
   position: relative;
   z-index: 3;
@@ -976,7 +1003,7 @@ section,
 
 .hero .about-info:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: #09091aeb;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1728,3 +1755,84 @@ section,
   width: 100%;
   height:100%;
 }
+
+.aboutImg{
+  width: 600px;
+  border-radius: 7px;
+}
+
+
+/* From Uiverse.io by adeladel522 */ 
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: var(--accent-color);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  margin: 0 10px;
+  text-shadow: 0px 0px 1px #000000e0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
