@@ -10,7 +10,7 @@ class MyDocument extends Document {
    * @returns {JSX.Element} The rendered HTML document.
    */
   render() {
-    const basePath = process.env.NODE_ENV === 'production' ? "https://saikyawkyawkhaing.github.io/ac" : '';
+    const basePath = process.env.NODE_ENV === 'production' ? "https://digitechvault.com" : '';
     return (
       <Html>
         <Head>
